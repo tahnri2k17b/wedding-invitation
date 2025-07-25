@@ -45,29 +45,23 @@ img {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh; /* fill the screen */
+  width: 100%;
+  height: 80vh;
   background-image: url('hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
   overflow: hidden;
 }
 
 .hero .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
+  text-align: center;
 }
 
 .hero-title {
@@ -79,12 +73,11 @@ img {
 
 /* Updated hero content */
 .hero-content {
-  position: absolute;
-  top: 15%; /* reduce to go higher (try 10% or 12%) */
-  left: 50%;
-  transform: translateX(-50%);
+  max-width: 100%;
   text-align: center;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero-names {
   font-family: 'Great Vibes', cursive;
