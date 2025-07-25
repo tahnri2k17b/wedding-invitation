@@ -30,23 +30,24 @@ updateCountdown();
 const countdownInterval = setInterval(updateCountdown, 1000);
 
 // rsvp
-document.getElementById('rsvpForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const form = e.target;
-  const formData = new FormData(form);
+  document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-  fetch("https://script.google.com/macros/s/AKfycby9KOlTBXvW-T8M8v5jruTakrT5qDgruYQlHyTapRgxuxjuK7AYZy09LguzmEhXAkaYjg/exec", {
-    method: "POST",
-    body: new URLSearchParams(formData)
-  })
-  .then(res => res.json())
-  .then(data => {
-    if (data.result === 'success') {
-      form.reset();
-      document.getElementById('thankYouMessage').style.display = 'block';
-    } else {
-      alert("Submission failed: " + (data.error || "Unknown error"));
-    }
-  })
-  .catch(err => alert("Error: " + err.message));
-});
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("YOUR_WEB_APP_URL_HERE", {
+      method: "POST",
+      body: new URLSearchParams(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.result === 'success') {
+        form.reset();
+        document.getElementById('thankYouMessage').style.display = 'block';
+      } else {
+        alert("Submission error: " + (data.error || "Unknown error"));
+      }
+    })
+    .catch(err => alert("Network error: " + err.message));
+  });
