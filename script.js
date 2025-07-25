@@ -30,24 +30,33 @@ updateCountdown();
 const countdownInterval = setInterval(updateCountdown, 1000);
 
 // rsvp
-  document.getElementById('rsvpForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+  e.preventDefault();
 
-    const form = e.target;
-    const formData = new FormData(form);
+  const form = e.target;
+  const formData = new FormData(form);
 
-    fetch("https://script.google.com/macros/s/AKfycbxzcpGM4oM5LyCi5WT2EVN5rXEQS-0SWGZAzSLly-jVT1sB86YI8OBHx-nR2p0dsVU4IQ/exec", {
-      method: "POST",
-      body: new URLSearchParams(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.result === 'success') {
-        form.reset();
-        document.getElementById('thankYouMessage').style.display = 'block';
-      } else {
-        alert("Submission error: " + (data.error || "Unknown error"));
-      }
-    })
-    .catch(err => alert("Network error: " + err.message));
+  // Show loading, hide thank you (in case of resubmits)
+  document.getElementById('rsvpLoading').style.display = 'block';
+  document.getElementById('thankYouMessage').style.display = 'none';
+
+  fetch("https://script.google.com/macros/s/AKfycbxzcpGM4oM5LyCi5WT2EVN5rXEQS-0SWGZAzSLly-jVT1sB86YI8OBHx-nR2p0dsVU4IQ/exec", {
+    method: "POST",
+    body: new URLSearchParams(formData)
+  })
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('rsvpLoading').style.display = 'none';
+
+    if (data.result === 'success') {
+      form.reset();
+      document.getElementById('thankYouMessage').style.display = 'block';
+    } else {
+      alert("Submission failed: " + (data.error || "Unknown error"));
+    }
+  })
+  .catch(err => {
+    document.getElementById('rsvpLoading').style.display = 'none';
+    alert("Error submitting: " + err.message);
   });
+});
