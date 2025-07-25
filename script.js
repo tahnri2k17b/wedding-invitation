@@ -28,3 +28,27 @@ function updateCountdown() {
 // Update the countdown immediately and then every second
 updateCountdown();
 const countdownInterval = setInterval(updateCountdown, 1000);
+
+// rsvp
+document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form from redirecting
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://formsubmit.co/ajax/tahnri2k17b@gmail.com", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        document.getElementById('thankYouMessage').style.display = 'block';
+      } else {
+        alert("Oops! Something went wrong.");
+      }
+    })
+    .catch(error => {
+      alert("Error submitting the form.");
+    });
+  });
