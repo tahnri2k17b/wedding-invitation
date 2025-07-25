@@ -81,7 +81,7 @@ img {
   align-items: center;
 }
 .hero-names {
-  font-family: 'Great Vibes', cursive;
+  font-family: var(--script-font);
   font-size: 3rem;
   letter-spacing: 2px;
   margin-bottom: 10rem;
