@@ -78,10 +78,15 @@ img {
 
 /* Updated hero content */
 .hero-content {
+  position: absolute;
+  top: 15%; /* reduce to go higher (try 10% or 12%) */
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
+  z-index: 2;
 }
 .hero-names {
-  font-family: var(--script-font);
+  font-family: 'Allura', cursive;
   font-size: 3rem;
   letter-spacing: 2px;
   margin-bottom: 15rem;
