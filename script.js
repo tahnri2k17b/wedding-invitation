@@ -36,7 +36,7 @@ const countdownInterval = setInterval(updateCountdown, 1000);
     const form = e.target;
     const formData = new FormData(form);
 
-    fetch("YOUR_WEB_APP_URL_HERE", {
+    fetch("https://script.google.com/macros/s/AKfycbxzcpGM4oM5LyCi5WT2EVN5rXEQS-0SWGZAzSLly-jVT1sB86YI8OBHx-nR2p0dsVU4IQ/exec", {
       method: "POST",
       body: new URLSearchParams(formData)
     })
