@@ -31,24 +31,24 @@ const countdownInterval = setInterval(updateCountdown, 1000);
 
 // rsvp
 document.getElementById('rsvpForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent form from redirecting
+  e.preventDefault(); // Prevent form from redirecting
 
-    const form = e.target;
-    const formData = new FormData(form);
+  const form = e.target;
+  const formData = new FormData(form);
 
-    fetch("https://formsubmit.co/ajax/tahnri2k17b@gmail.com", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-        form.reset();
-        document.getElementById('thankYouMessage').style.display = 'block';
-      } else {
-        alert("Oops! Something went wrong.");
-      }
-    })
-    .catch(error => {
-      alert("Error submitting the form.");
-    });
+  fetch("https://script.google.com/macros/s/AKfycbwtVWTH7bQATClcLyMcTRmyCviNCCvwMCUdLz_3kETgYi2HdKflUT33QVTRqMpEH0uM/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      form.reset();
+      document.getElementById('thankYouMessage').style.display = 'block';
+    } else {
+      alert("Oops! Something went wrong.");
+    }
+  })
+  .catch(error => {
+    alert("Error submitting the form.");
   });
+});
