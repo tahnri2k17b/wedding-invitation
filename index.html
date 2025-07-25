@@ -7,7 +7,7 @@
     <title>Emmanuel Johnne &amp; Nadia Mikhaela – Wedding Invitation</title>
     <!-- Google Fonts for elegant type pairing -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&family=Parisienne&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -218,7 +218,11 @@
           <span class="detail-label">Date &amp; Time</span>
           <span class="detail-value">September&nbsp;9,&nbsp;2025 at 1:00&nbsp;PM</span>
           <span class="detail-desc">Tuesday</span>
-          <a class="btn small" href="#" target="_blank">Add to Calendar</a>
+          <!-- Provide two add‑to‑calendar options: download .ics and Google Calendar -->
+          <div class="calendar-links">
+            <a class="btn small" href="ej-nadia-wedding.ics" download>Download .ICS</a>
+            <a class="btn small" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Emmanuel%20Johnne%20%26%20Nadia%20Mikhaela%20Wedding&amp;dates=20250909T050000Z/20250909T090000Z&amp;details=Join%20us%20for%20our%20special%20day&amp;location=Kubyertos%20Restaurant,%20San%20Jose%20del%20Monte,%20Bulacan" target="_blank">Add to Google Calendar</a>
+          </div>
         </div>
         <!-- Attire -->
         <div class="detail-item">
@@ -299,12 +303,29 @@
 
     <!-- RSVP Section -->
     <section id="rsvp" class="rsvp">
-      <h2 class="section-heading">We look forward to seeing you!</h2>
+      <h2 class="section-heading">RSVP</h2>
       <p class="rsvp-text">
-        Our celebration wouldn’t be the same without you. Please let us know if
-        you plan to attend by following the RSVP link below.
+        We look forward to celebrating with you! Kindly let us know if you will be joining us by completing the form below.
       </p>
-      <a href="#" class="btn rsvp-btn">RSVP</a>
+      <form action="https://formsubmit.co/your-email@example.com" method="POST" class="rsvp-form">
+        <div class="form-group">
+          <label for="guest-name">Your Name</label>
+          <input type="text" id="guest-name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="attendance">Will you attend?</label>
+          <select id="attendance" name="attendance" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Yes">Yes, I will attend</option>
+            <option value="No">No, regretfully I cannot attend</option>
+          </select>
+        </div>
+        <!-- Optional: redirect to a thank‑you page after submission -->
+        <input type="hidden" name="_next" value="/thanks.html" />
+        <input type="hidden" name="_subject" value="Wedding RSVP" />
+        <button type="submit" class="btn rsvp-btn">Submit RSVP</button>
+      </form>
+      <p class="rsvp-note">Please replace <em>your-email@example.com</em> in the form action with your own email or Formspree endpoint to collect RSVPs.</p>
     </section>
 
     <footer>

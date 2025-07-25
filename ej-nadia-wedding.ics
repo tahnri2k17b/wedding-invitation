@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nadia & EJ Wedding//EN
+BEGIN:VEVENT
+UID:ej-nadia-wedding-2025
+DTSTAMP:20240725T000000Z
+DTSTART:20250909T050000Z
+DTEND:20250909T090000Z
+SUMMARY:Nadia & EJ Wedding
+LOCATION:Kubyertos Restaurant, San Jose del Monte, Bulacan
+DESCRIPTION:Join us in celebrating the union of Nadia Mikhaela and Emmanuel Johnne.
+END:VEVENT
+END:VCALENDAR
