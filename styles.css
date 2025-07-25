@@ -368,6 +368,7 @@ img {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 /* Each sponsor card appears with a semi-transparent white background and subtle border */
