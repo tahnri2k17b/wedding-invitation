@@ -362,7 +362,6 @@ img {
 /* Use a grid layout for sponsors to present two columns on desktop and stack on mobile */
 .sponsor-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 1rem;
   max-width: 700px;
