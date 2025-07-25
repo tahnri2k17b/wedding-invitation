@@ -471,16 +471,24 @@ img {
 
 /* RSVP button variant uses the secondary palette */
 .rsvp-btn {
-  margin-top: 1rem;
-  background-color: var(--secondary);
-  color: #fff;
+  background-color: var(--accent); /* warm golden accent */
+  color: white;
   border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  font-family: var(--sans-font);
+  letter-spacing: 0.5px;
 }
 
 .rsvp-btn:hover {
-  background-color: var(--primary);
-  color: #fff;
-  border: none;
+   background-color: #a68646; /* slightly deeper gold on hover */
+  transform: translateY(-2px);
 }
 
 /* RSVP form styling */
