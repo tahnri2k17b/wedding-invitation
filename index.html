@@ -24,46 +24,98 @@
       </div>
     </section>
 
-    <!-- Dress Code Section -->
-    <section id="dress-code" class="dress-code">
-      <h2 class="section-heading">Dress Code</h2>
-      <p class="dress-desc">
-        We kindly invite guests to dress in formal or semi‑formal attire inspired
-        by our wedding colours.
-      </p>
-      <div class="palette-card">
-        <p class="palette-title">Suggested palette:</p>
-        <!-- Custom palette swatches coded manually -->
-        <div class="palette-swatches">
-          <div class="palette-swatch">
-            <span class="palette-color-circle" style="background-color: #6a7d8d;"></span>
-            <span class="palette-label">Slate Blue</span>
+  <!-- Details Section -->
+    <section id="details" class="details">
+      <h2 class="section-heading">Details</h2>
+      <!--
+        The details container stacks each item vertically with a subtle
+        dividing line between entries. This mirrors the inspiration
+        reference where location, date/time and attire are separated
+        by horizontal rules. Additional items can be added by
+        duplicating the detail-item block.
+      -->
+      <div class="details-container">
+        <!-- Location -->
+        <div class="detail-item">
+          <span class="detail-label">Location</span>
+          <span class="detail-value">Kubyertos Restaurant</span>
+          <span class="detail-desc">San Jose del Monte, Bulacan</span>
+          <a class="btn small" href="https://www.google.com/maps/search/?api=1&query=Kubyertos+San+Jose+del+Monte+Bulacan" target="_blank">View Map</a>
+        </div>
+        <!-- Date & Time -->
+        <div class="detail-item">
+          <span class="detail-label">Date &amp; Time</span>
+          <span class="detail-value">September&nbsp;9,&nbsp;2025 at 1:00&nbsp;PM</span>
+          <span class="detail-desc">Tuesday</span>
+          <!-- Provide two add‑to‑calendar options: download .ics and Google Calendar -->
+          <div class="calendar-links">
+            <a class="btn small" href="ej-nadia-wedding.ics" download>Download .ICS</a>
+            <a class="btn small" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Emmanuel%20Johnne%20%26%20Nadia%20Mikhaela%20Wedding&amp;dates=20250909T050000Z/20250909T090000Z&amp;details=Join%20us%20for%20our%20special%20day&amp;location=Kubyertos%20Restaurant,%20San%20Jose%20del%20Monte,%20Bulacan" target="_blank">Add to Google Calendar</a>
           </div>
-          <div class="palette-swatch">
-            <span class="palette-color-circle" style="background-color: #bfddee;"></span>
-            <span class="palette-label">Dusty Blue</span>
-          </div>
-          <div class="palette-swatch">
-            <span class="palette-color-circle" style="background-color: #d0ebf9;"></span>
-            <span class="palette-label">Powder Blue</span>
-          </div>
-          <div class="palette-swatch">
-            <span class="palette-color-circle" style="background-color: #e6f7fb;"></span>
-            <span class="palette-label">Light Blue Mist</span>
-          </div>
-          <div class="palette-swatch">
-            <span class="palette-color-circle" style="background-color: #d9d9d9;"></span>
-            <span class="palette-label">Misty Dove Gray</span>
-          </div>
+        </div>
+        <!-- Attire -->
+        <div class="detail-item">
+          <span class="detail-label">Attire</span>
+          <span class="detail-value">Formal &amp; Semi‑Formal</span>
+          <span class="detail-desc">Please wear attire inspired by our wedding colours</span>
         </div>
       </div>
     </section>
-
+    
     <!-- Wedding Entourage Section -->
     <section id="entourage" class="entourage">
       <!-- Romantic headline -->
       <p class="entourage-headline">Every step down the aisle is guided by the love and support of those we hold dear.</p>
 
+ <!-- Mothers -->
+      <div class="entourage-group-card">
+        <div class="group-header">
+          <div class="group-header-text">
+            <span class="group-title">Mothers</span>
+            <span class="group-subtext">Two women whose love made this day possible.</span>
+          </div>
+        </div>
+        <div class="names">
+          <p><strong>Mother of the Bride</strong> – Gloria Patawaran</p>
+          <p><strong>Mother of the Groom</strong> – Elizabeth Gacula</p>
+        </div>
+      </div>
+
+      <!-- Floral divider -->
+      <div class="floral-divider">❧</div>
+
+      <!-- Principal Sponsors -->
+      <div class="entourage-group-card">
+        <div class="group-header">
+          <div class="group-header-text">
+            <span class="group-title">Principal Sponsors</span>
+            <span class="group-subtext">Guiding stars on this journey of marriage.</span>
+          </div>
+        </div>
+        <!-- Display each sponsor or pair in its own card for a modern grid layout -->
+        <div class="sponsor-grid">
+          <div class="sponsor-card">
+            <p>Jeffrey Prado<br /><span class="amp">&amp;</span> Mary Ann Prado</p>
+          </div>
+          <div class="sponsor-card">
+            <p>Rogelio Prado<br /><span class="amp">&amp;</span> Susana Prado</p>
+          </div>
+          <div class="sponsor-card">
+            <p>Armando Patawaran Jr.</p>
+          </div>
+          <div class="sponsor-card">
+            <p>Mary Antonet Patawaran</p>
+          </div>
+          <div class="sponsor-card">
+            <p>Theresa Cheong</p>
+          </div>
+          <div class="sponsor-card">
+            <p>Tyronne Prado</p>
+          </div>
+        </div>
+      </div>
+
+      
       <!-- Flower Girls -->
       <div class="entourage-group-card">
         <div class="group-header">
@@ -146,92 +198,42 @@
       <!-- Floral divider -->
       <div class="floral-divider">❧</div>
 
-      <!-- Mothers -->
-      <div class="entourage-group-card">
-        <div class="group-header">
-          <div class="group-header-text">
-            <span class="group-title">Mothers</span>
-            <span class="group-subtext">Two women whose love made this day possible.</span>
-          </div>
-        </div>
-        <div class="names">
-          <p><strong>Mother of the Bride</strong> – Gloria Patawaran</p>
-          <p><strong>Mother of the Groom</strong> – Elizabeth Gacula</p>
-        </div>
-      </div>
-
-      <!-- Floral divider -->
-      <div class="floral-divider">❧</div>
-
-      <!-- Principal Sponsors -->
-      <div class="entourage-group-card">
-        <div class="group-header">
-          <div class="group-header-text">
-            <span class="group-title">Principal Sponsors</span>
-            <span class="group-subtext">Guiding stars on this journey of marriage.</span>
-          </div>
-        </div>
-        <!-- Display each sponsor or pair in its own card for a modern grid layout -->
-        <div class="sponsor-grid">
-          <div class="sponsor-card">
-            <p>Jeffrey Prado<br /><span class="amp">&amp;</span> Mary Ann Prado</p>
-          </div>
-          <div class="sponsor-card">
-            <p>Rogelio Prado<br /><span class="amp">&amp;</span> Susana Prado</p>
-          </div>
-          <div class="sponsor-card">
-            <p>Armando Patawaran Jr.</p>
-          </div>
-          <div class="sponsor-card">
-            <p>Mary Antonet Patawaran</p>
-          </div>
-          <div class="sponsor-card">
-            <p>Theresa Cheong</p>
-          </div>
-          <div class="sponsor-card">
-            <p>Tyronne Prado</p>
-          </div>
-        </div>
-      </div>
-
+     
       <!-- Heartfelt footer -->
       <p class="entourage-footer">Each name here holds a piece of our story—thank you for walking this path with us.</p>
     </section>
 
-    <!-- Details Section -->
-    <section id="details" class="details">
-      <h2 class="section-heading">Details</h2>
-      <!--
-        The details container stacks each item vertically with a subtle
-        dividing line between entries. This mirrors the inspiration
-        reference where location, date/time and attire are separated
-        by horizontal rules. Additional items can be added by
-        duplicating the detail-item block.
-      -->
-      <div class="details-container">
-        <!-- Location -->
-        <div class="detail-item">
-          <span class="detail-label">Location</span>
-          <span class="detail-value">Kubyertos Restaurant</span>
-          <span class="detail-desc">San Jose del Monte, Bulacan</span>
-          <a class="btn small" href="https://www.google.com/maps/search/?api=1&query=Kubyertos+San+Jose+del+Monte+Bulacan" target="_blank">View Map</a>
-        </div>
-        <!-- Date & Time -->
-        <div class="detail-item">
-          <span class="detail-label">Date &amp; Time</span>
-          <span class="detail-value">September&nbsp;9,&nbsp;2025 at 1:00&nbsp;PM</span>
-          <span class="detail-desc">Tuesday</span>
-          <!-- Provide two add‑to‑calendar options: download .ics and Google Calendar -->
-          <div class="calendar-links">
-            <a class="btn small" href="ej-nadia-wedding.ics" download>Download .ICS</a>
-            <a class="btn small" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Emmanuel%20Johnne%20%26%20Nadia%20Mikhaela%20Wedding&amp;dates=20250909T050000Z/20250909T090000Z&amp;details=Join%20us%20for%20our%20special%20day&amp;location=Kubyertos%20Restaurant,%20San%20Jose%20del%20Monte,%20Bulacan" target="_blank">Add to Google Calendar</a>
+<!-- Dress Code Section -->
+    <section id="dress-code" class="dress-code">
+      <h2 class="section-heading">Dress Code</h2>
+      <p class="dress-desc">
+        We kindly invite guests to dress in formal or semi‑formal attire inspired
+        by our wedding colours.
+      </p>
+      <div class="palette-card">
+        <p class="palette-title">Suggested palette:</p>
+        <!-- Custom palette swatches coded manually -->
+        <div class="palette-swatches">
+          <div class="palette-swatch">
+            <span class="palette-color-circle" style="background-color: #6a7d8d;"></span>
+            <span class="palette-label">Slate Blue</span>
           </div>
-        </div>
-        <!-- Attire -->
-        <div class="detail-item">
-          <span class="detail-label">Attire</span>
-          <span class="detail-value">Formal &amp; Semi‑Formal</span>
-          <span class="detail-desc">Please wear attire inspired by our wedding colours</span>
+          <div class="palette-swatch">
+            <span class="palette-color-circle" style="background-color: #bfddee;"></span>
+            <span class="palette-label">Dusty Blue</span>
+          </div>
+          <div class="palette-swatch">
+            <span class="palette-color-circle" style="background-color: #d0ebf9;"></span>
+            <span class="palette-label">Powder Blue</span>
+          </div>
+          <div class="palette-swatch">
+            <span class="palette-color-circle" style="background-color: #e6f7fb;"></span>
+            <span class="palette-label">Light Blue Mist</span>
+          </div>
+          <div class="palette-swatch">
+            <span class="palette-color-circle" style="background-color: #d9d9d9;"></span>
+            <span class="palette-label">Misty Dove Gray</span>
+          </div>
         </div>
       </div>
     </section>
