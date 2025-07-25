@@ -316,14 +316,11 @@ img {
 /* Header inside each group */
 .group-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
-.group-icon {
-  font-size: 1.8rem;
-  margin-right: 0.6rem;
-  color: var(--accent);
-}
+
 .group-header-text {
   display: flex;
   flex-direction: column;
