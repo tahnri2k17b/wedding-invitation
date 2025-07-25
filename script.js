@@ -35,7 +35,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
   const form = e.target;
   const formData = new FormData(form);
 
-  fetch("https://script.google.com/macros/s/YOUR_DEPLOYED_WEB_APP_URL/exec", {
+  fetch("https://script.google.com/macros/s/AKfycby9KOlTBXvW-T8M8v5jruTakrT5qDgruYQlHyTapRgxuxjuK7AYZy09LguzmEhXAkaYjg/exec", {
     method: "POST",
     body: new URLSearchParams(formData)
   })
