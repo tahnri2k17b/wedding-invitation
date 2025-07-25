@@ -47,7 +47,7 @@ img {
   position: relative;
   height: 80vh;
   /* Use the generated powder-blue watercolor background for the hero */
-  background-image: url('hero.png');
+  background-image: url('hero.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
