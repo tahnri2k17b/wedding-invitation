@@ -61,7 +61,6 @@ img {
   text-align: center;
   /* reduce the overlay darkness so the hero image remains visible */
   background: rgba(0, 0, 0, 0.25);
-  padding: 2rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -83,9 +82,9 @@ img {
 }
 .hero-names {
   font-family: var(--script-font);
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: 2px;
-  margin-bottom: 0.3rem;
+  margin-bottom: 15rem;
   color: #fff;
 }
 
