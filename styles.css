@@ -289,7 +289,7 @@ img {
 
 /* Headline at top of entourage */
 .entourage-headline {
-  font-family: var(--script-font);
+  font-family: var(--serif-font);
   font-size: 2rem;
   color: var(--primary);
   text-align: center;
