@@ -609,7 +609,6 @@ img {
 }
 
 .calendar-links .btn.small {
-  flex: 1 1 auto;
   white-space: nowrap;
   background-color: var(--accent);
   color: white;
