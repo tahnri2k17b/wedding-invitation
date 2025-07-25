@@ -1,0 +1,859 @@
+/*
+  Powder Blue Floral Wedding Invitation Stylesheet
+  This CSS defines a soft, romantic design built around a powder blue
+  palette and delicate floral textures. Sections mirror the sample
+  invitation layout while being mindful of a minimal image count.
+*/
+
+/* Custom variables */
+:root {
+  --script-font: 'Great Vibes', cursive;
+  --serif-font: 'Playfair Display', serif;
+  --sans-font: 'Montserrat', sans-serif;
+  --primary: #4a6fa5; /* deep powder blue */
+  --secondary: #8eaad4; /* mid powder blue */
+  --light-bg: #f5f8fc; /* very light blue */
+  --floral-pattern: url('floral-bg.png');
+  --accent: #b89b5e; /* warm golden accent */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--sans-font);
+  color: var(--primary);
+  background-color: var(--light-bg);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 80vh;
+  /* Use the generated powder-blue watercolor background for the hero */
+  background-image: url('hero.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero .overlay {
+  text-align: center;
+  /* reduce the overlay darkness so the hero image remains visible */
+  background: rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-family: var(--script-font);
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+/* Updated hero content */
+.hero-content {
+  text-align: center;
+}
+.hero-names {
+  font-family: var(--script-font);
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+/* Full names above the nickname in hero */
+.hero-full-names {
+  font-family: var(--serif-font);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+.hero-date {
+  font-family: var(--serif-font);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.hero-decoration {
+  width: 80px;
+  height: 0;
+  border-top: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  margin: 1rem auto;
+  position: relative;
+}
+.hero-decoration::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+.hero-hashtag {
+  font-family: var(--sans-font);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.hero-subtitle {
+  font-family: var(--serif-font);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.hero-date {
+  font-family: var(--serif-font);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Section headings */
+.section-heading {
+  font-family: var(--script-font);
+  font-size: 2.3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/* Golden underline for section headings */
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: var(--accent);
+  margin: 0.6rem auto 0;
+}
+
+/* Dress Code Section */
+.dress-code {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+.dress-desc {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  font-size: 1rem;
+  color: var(--primary);
+  line-height: 1.6;
+}
+.palette-card {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  background-color: var(--light-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.palette-title {
+  font-family: var(--serif-font);
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  color: var(--primary);
+}
+.palette-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+.palette-color {
+  flex: 1 1 20%;
+  height: 40px;
+  border-radius: 4px;
+}
+.palette-color.slate { background-color: #5d7c9b; }
+.palette-color.dusty { background-color: #8eb2cd; }
+.palette-color.powder { background-color: #b7cfe5; }
+.palette-color.mist { background-color: #dcecf6; }
+.palette-color.gray { background-color: #d7dadd; }
+
+.palette-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  color: var(--primary);
+}
+.palette-labels span {
+  flex: 1 1 20%;
+  text-align: center;
+}
+
+/* Custom palette swatches */
+/* Custom palette swatches (updated names to avoid conflicts) */
+.palette-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.palette-swatch {
+  flex: 1 1 calc(20% - 1rem);
+  min-width: 100px;
+  max-width: 150px;
+  text-align: center;
+}
+
+.palette-color-circle {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.palette-label {
+  display: block;
+  font-family: var(--serif-font);
+  font-size: 0.85rem;
+  color: var(--primary);
+}
+
+/* Entourage Section */
+.entourage {
+  /* Use a botanical watercolor background with parallax effect */
+  padding: 4rem 2rem;
+  background-image: url('entourage-bg.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--primary);
+  position: relative;
+}
+
+/* Apply a light overlay for readability */
+/* Apply a light overlay for readability */
+.entourage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 0;
+}
+/* Ensure child elements appear above overlay */
+.entourage > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Headline at top of entourage */
+.entourage-headline {
+  font-family: var(--script-font);
+  font-size: 2rem;
+  color: var(--primary);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+/* Card container for each group */
+/* Card container for each group */
+.entourage-group-card {
+  /* A slightly more transparent card to let the botanical background peek through */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 0 auto 2rem auto;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Remove the unused two-column layout (no longer needed) */
+
+
+/* Header inside each group */
+.group-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.group-icon {
+  font-size: 1.8rem;
+  margin-right: 0.6rem;
+  color: var(--accent);
+}
+.group-header-text {
+  display: flex;
+  flex-direction: column;
+}
+.group-title {
+  font-family: var(--script-font);
+  font-size: 1.6rem;
+  color: var(--primary);
+}
+.group-subtext {
+  font-family: var(--serif-font);
+  font-size: 0.8rem;
+  color: var(--primary);
+  margin-top: 0.2rem;
+  font-style: italic;
+}
+
+/* Names list */
+.names p {
+  font-family: var(--serif-font);
+  font-size: 0.9rem;
+  color: var(--primary);
+  margin: 0.3rem 0;
+}
+
+/* Sponsors names column layout */
+.sponsors-names {
+  column-count: 2;
+  column-gap: 1.5rem;
+}
+.sponsors-names p {
+  break-inside: avoid;
+}
+
+/* New sponsor grid styling for principal sponsors */
+/* Use a grid layout for sponsors to present two columns on desktop and stack on mobile */
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Each sponsor card appears with a semi-transparent white background and subtle border */
+.sponsor-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.sponsor-card p {
+  font-family: var(--serif-font);
+  font-size: 0.9rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.sponsor-card p strong {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Ampersand styling inside sponsor cards */
+.sponsor-card .amp {
+  color: var(--accent);
+  font-family: var(--script-font);
+  font-size: 1rem;
+  margin: 0 0.2rem;
+}
+
+/* Footer line */
+.entourage-footer {
+  font-family: var(--script-font);
+  font-size: 1.4rem;
+  color: var(--primary);
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Floral divider between entourage cards */
+.floral-divider {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+
+/* Responsive tweaks for new sections */
+@media (max-width: 768px) {
+  /* Display color swatches vertically on mobile */
+  .palette-swatches {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .palette-swatch {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  /* Adjust entourage groups spacing on mobile */
+  .entourage-group-card {
+    margin-bottom: 2rem;
+  }
+
+  /* Stack sponsor grid cards on mobile */
+  .sponsor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  background-color: var(--accent);
+  color: #fff;
+  font-family: var(--serif-font);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover state makes the button filled with the accent colour */
+.btn:hover {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+}
+
+.btn.small {
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+}
+
+/* RSVP button variant uses the secondary palette */
+.rsvp-btn {
+  margin-top: 1rem;
+  background-color: var(--secondary);
+  color: #fff;
+  border: none;
+}
+
+.rsvp-btn:hover {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+}
+
+/* Details Section */
+.details {
+  background-image: var(--floral-pattern);
+  background-size: cover;
+  background-repeat: repeat;
+  padding: 4rem 2rem;
+}
+
+.details-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.details-item {
+  flex: 1 1 280px;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.details-title {
+  font-family: var(--serif-font);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary);
+}
+
+.details-main {
+  font-family: var(--serif-font);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--primary);
+}
+
+.details-sub {
+  font-size: 0.85rem;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+.swatches {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Photos Section */
+.photos {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.photo {
+  flex: 1 1 45%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(95%);
+}
+
+/* Reminders */
+.reminders {
+  background-image: var(--floral-pattern);
+  background-size: cover;
+  padding: 4rem 2rem;
+}
+
+.reminder-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.reminder-item {
+  flex: 1 1 300px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 1.5rem;
+  backdrop-filter: blur(2px);
+}
+
+.reminder-item h3 {
+  font-family: var(--serif-font);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.reminder-item p {
+  font-size: 0.9rem;
+  color: var(--primary);
+  line-height: 1.5;
+}
+
+/* Playlist Section */
+.playlist {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.playlist iframe {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Scenic Section */
+.scenic {
+  position: relative;
+  height: 50vh;
+  background-image: url('secondary.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scenic-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scenic-overlay p {
+  font-family: var(--serif-font);
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.4;
+}
+
+/* Countdown */
+.countdown {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.time-segment {
+  flex: 1 1 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--serif-font);
+}
+
+.time-segment span {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.time-segment small {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-top: 0.25rem;
+}
+
+/* Gallery2 (secondary image for additional visual interest) */
+.gallery2 {
+  padding: 0;
+}
+
+.gallery2 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* RSVP Section */
+.rsvp {
+  background-image: var(--floral-pattern);
+  background-size: cover;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.rsvp-text {
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+  font-size: 1rem;
+  color: var(--primary);
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  background-color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--primary);
+  border-top: 1px solid #e0eaf5;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+  .details-grid, .reminder-grid, .photo-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .details-item, .reminder-item {
+    max-width: none;
+  }
+  .timer {
+    gap: 1rem;
+  }
+  .time-segment span {
+    font-size: 2rem;
+  }
+}
+
+/* ------------------------------------------------------------------- */
+/* Custom overrides and new styles for powder blue invitation redesign */
+/*
+   To simplify the layout and mirror the reference design, we
+   override the existing details section styling. The new
+   `.details-container` stacks items vertically, with each item
+   separated by a thin border. The surrounding section uses a
+   clean, light background instead of a repeating floral image.
+*/
+
+/* Override the background and padding for the details section */
+.details {
+  background-image: none;
+  background-color: var(--light-bg);
+  padding: 4rem 2rem;
+}
+
+/* Container for stacked detail items */
+.details-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Each detail item (location, date/time, attire) */
+.detail-item {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Remove top border on the first item */
+.details-container .detail-item:first-child {
+  border-top: none;
+}
+
+.detail-label {
+  display: block;
+  font-family: var(--serif-font);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+}
+
+.detail-value {
+  display: block;
+  font-family: var(--serif-font);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.3rem 0;
+  color: var(--primary);
+}
+
+.detail-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Button within detail items */
+.detail-item .btn {
+  margin-top: 0.6rem;
+  /* Override general button styles to ensure visibility within details */
+  padding: 0.4rem 1rem;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.detail-item .btn:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+/* Row of colour swatches for attire palette */
+.swatches-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+/* Individual swatch styling inside the swatches-row */
+.swatches-row .swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Simplify the reminders and RSVP sections by removing floral backgrounds */
+.reminders,
+.rsvp {
+  background-image: none;
+  background-color: var(--light-bg);
+}
