@@ -346,25 +346,15 @@ We promise to share the beautiful photos captured by our professional photograph
     We look forward to celebrating with you! Kindly let us know if you will be joining us by completing the form below.
   </p>
 
-  <form id="rsvpForm" class="rsvp-form">
-    <div class="form-group">
-      <label for="guest-name">Your Name</label>
-      <input type="text" id="guest-name" name="name" required />
-    </div>
-    <div class="form-group">
-      <label for="attendance">Will you attend?</label>
-      <select id="attendance" name="attendance" required>
-        <option value="" disabled selected>Select an option</option>
-        <option value="Yes">Yes, I will attend</option>
-        <option value="No">No, regretfully I cannot attend</option>
-      </select>
-    </div>
-
-    <!-- Hidden subject field -->
-    <input type="hidden" name="_subject" value="Wedding RSVP" />
-
-    <button type="submit" class="btn rsvp-btn">Submit RSVP</button>
-  </form>
+ <form id="rsvpForm" class="rsvp-form">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <select name="attendance" required>
+    <option value="" disabled selected>Select an option</option>
+    <option value="Yes">Yes, I will attend</option>
+    <option value="No">No, regretfully I cannot attend</option>
+  </select>
+  <button type="submit">Submit</button>
+</form>
 
   <p id="thankYouMessage" style="display: none; color: green; font-weight: bold; margin-top: 1rem;">
     Thank you for submitting your RSVP!
