@@ -937,7 +937,7 @@ footer {
 
 /* Thank You Section */
 .thankyou-section {
-  height: 80vh; /* or adjust to 60vh, 50vh depending on what you want */
+  height: 30vh; /* or adjust to 60vh, 50vh depending on what you want */
   background-image: url('thankyou.png');
   background-size: cover;
   background-position: center center;
