@@ -266,6 +266,7 @@ img {
   background-attachment: fixed;
   color: var(--primary);
   position: relative;
+  text-align: center;
 }
 
 /* Apply a light overlay for readability */
