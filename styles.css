@@ -935,6 +935,21 @@ footer {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* Thank You Section */
+.thankyou-section {
+  height: 80vh; /* or adjust to 60vh, 50vh depending on what you want */
+  background-image: url('thankyou.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+
 /* Simplify the reminders and RSVP sections by removing floral backgrounds */
 .reminders,
 .rsvp {
